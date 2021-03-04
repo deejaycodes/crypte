@@ -4,7 +4,7 @@
 
 <!-- Main Content -->
 <div class="main-content">
-    <%- include("../partials/alerts") %>
+   
     <section class="section">
         <div class="section-body">
             <div class="row">
@@ -29,17 +29,17 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <%  for (let i = 0; i < users.length; i++ ) { %>
+                                        
                                         <tr>
-                                            <td><%= i + 1 %></td>
-                                            <td><%= users[i].name %></td>
-                                            <td><%= users[i].email %></td>
-                                            <td><%= users[i].phone %></td>
-                                            <td><%= users[i].role == 2 ? 'Manager' : 'User' %></td>
-                                            <td>$<%= users[i].wallet %>.00</td>
-                                            <td><%= users[i].createdAt %></td>
+                                            <td>1</td>
+                                            <td>Jones</td>
+                                            <td>jones@gmail.com</td>
+                                            <td>0812345678</td>
+                                            <td>User</td>
+                                            <td>$2345.00</td>
+                                            <td>3/12/2019</td>
                                             <td>
-                                                <a href="/chats/<%=  users[i].id %>"
+                                                <a href="/chats"
                                                     class="btn btn-primary btn-pill">Chat</a>
                                                 <a href="javascript:void(0);" class="btn btn-danger btn-pill"
                                                     onclick="event.preventDefault();
@@ -48,11 +48,57 @@
                                                 </a>
                                                 <form id="delete-menu" action="/delete/user" method="POST"
                                                     style="display: none;">
-                                                    <input type="hidden" name="id" value="<%= users[i].id %>">
+                                                    <input type="hidden" name="id" value="">
                                                 </form>
                                             </td>
                                         </tr>
-                                        <% } %>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Jones</td>
+                                            <td>jones@gmail.com</td>
+                                            <td>0812345678</td>
+                                            <td>User</td>
+                                            <td>$2345.00</td>
+                                            <td>3/12/2019</td>
+                                            <td>
+                                                <a href="/chats"
+                                                    class="btn btn-primary btn-pill">Chat</a>
+                                                <a href="javascript:void(0);" class="btn btn-danger btn-pill"
+                                                    onclick="event.preventDefault();
+								                        document.getElementById('delete-menu').submit();" style="color: aliceblue;">
+                                                    Delete
+                                                </a>
+                                                <form id="delete-menu" action="/delete/user" method="POST"
+                                                    style="display: none;">
+                                                    <input type="hidden" name="id" value="">
+                                                </form>
+                                            </td>
+                                        </tr>
+                                      
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Janess</td>
+                                            <td>jones@gmail.com</td>
+                                            <td>0812345678</td>
+                                            <td>Admin</td>
+                                            <td>$2345.00</td>
+                                            <td>3/12/2019</td>
+                                            <td>
+                                                <a href="/chats"
+                                                    class="btn btn-primary btn-pill">Chat</a>
+                                                <a href="javascript:void(0);" class="btn btn-danger btn-pill"
+                                                    onclick="event.preventDefault();
+								                        document.getElementById('delete-menu').submit();" style="color: aliceblue;">
+                                                    Delete
+                                                </a>
+                                                <form id="delete-menu" action="/delete/user" method="POST"
+                                                    style="display: none;">
+                                                    <input type="hidden" name="id" value="">
+                                                </form>
+                                            </td>
+                                        </tr>
+                                      
+                                      
                                     </tbody>
                                 </table>
                             </div>

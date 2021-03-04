@@ -4,7 +4,7 @@
 
 <!-- Main Content -->
 <div class="main-content">
-    <%- include("../partials/alerts") %>
+  
     <section class="section">
         <div class="section-body">
             <div class="row">
@@ -20,24 +20,24 @@
                                         <tr>
                                             <th class="text-center">#</th>
                                             <th>Name</th>
-                                            <th>Min Investment</th>
-                                            <th>Max Investment</th>
+                                            
+                                          
                                             <th>Interest</th>
                                             <th>Duration</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <%  for (let i = 0; i < packages.length; i++ ) { %>
+                                      
                                         <tr>
-                                            <td><%= i + 1 %></td>
-                                            <td><%= packages[i].name %></td>
-                                            <td><%= packages[i].min_investment %></td>
-                                            <td><%= packages[i].max_investment %></td>
-                                            <td><%= packages[i].interest %></td>
-                                            <td><%= packages[i].duration %></td>
+                                            <td>1</td>
+                                            <td>Starter</td>
+                                            
+                                       
+                                            <td>3.5%</td>
+                                            <td>1 Year</td>
                                             <td>
-                                                <a href="/edit/package/<%= packages[i].id %>"
+                                                <a href="#"
                                                     class="btn btn-primary btn-pill">Edit</a>
                                                 <a href="javascript:void(0);" class="btn btn-danger btn-pill"
                                                     onclick="event.preventDefault();
@@ -46,11 +46,52 @@
                                                 </a>
                                                 <form id="delete-menu" action="/delete/package" method="POST"
                                                     style="display: none;">
-                                                    <input type="hidden" name="id" value="<%= packages[i].id %>">
+                                                    <input type="hidden" name="id" value="">
                                                 </form>
                                             </td>
                                         </tr>
-                                        <% } %>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Gold</td>
+                                            
+                                       
+                                            <td>6.5%</td>
+                                            <td>1 Year</td>
+                                            <td>
+                                                <a href="#"
+                                                    class="btn btn-primary btn-pill">Edit</a>
+                                                <a href="javascript:void(0);" class="btn btn-danger btn-pill"
+                                                    onclick="event.preventDefault();
+								                        document.getElementById('delete-menu').submit();" style="color: aliceblue;">
+                                                    Delete
+                                                </a>
+                                                <form id="delete-menu" action="/delete/package" method="POST"
+                                                    style="display: none;">
+                                                    <input type="hidden" name="id" value="">
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Bronze</td>
+                                            
+                                       
+                                            <td>9.5%</td>
+                                            <td>2 Years</td>
+                                            <td>
+                                                <a href="#"
+                                                    class="btn btn-primary btn-pill">Edit</a>
+                                                <a href="javascript:void(0);" class="btn btn-danger btn-pill"
+                                                    onclick="event.preventDefault();
+								                        document.getElementById('delete-menu').submit();" style="color: aliceblue;">
+                                                    Delete
+                                                </a>
+                                                <form id="delete-menu" action="/delete/package" method="POST"
+                                                    style="display: none;">
+                                                    <input type="hidden" name="id" value="">
+                                                </form>
+                                            </td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>

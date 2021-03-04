@@ -4,7 +4,7 @@
 
 <!-- Main Content -->
 <div class="main-content">
-    <%- include("../partials/alerts") %>
+
     <section class="section">
         <div class="section-body">
             <div class="row">
@@ -28,14 +28,14 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <%  for (let i = 0; i < users.length; i++ ) { %>
+                                       
                                         <tr>
-                                            <td><%= i + 1 %></td>
-                                            <td><%= users[i].name %></td>
-                                            <td><%= users[i].email %></td>
-                                            <td><%= users[i].phone %></td>
-                                            <td><%= users[i].role == 2 ? 'Manager' : 'User' %></td>
-                                            <td><%= users[i].wallet %></td>
+                                            <td>1</td>
+                                            <td>Dasol</td>
+                                            <td>dasol@gmail.com</td>
+                                            <td>091237683944</td>
+                                            <td>Manager</td>
+                                            <td>$29394</td>
                                             <td>
                                                 <a href="javascript:void(0);" class="btn btn-danger btn-pill"
                                                     onclick="event.preventDefault();
@@ -44,11 +44,48 @@
                                                 </a>
                                                 <form id="restore-menu" action="/restore/user" method="POST"
                                                     style="display: none;">
-                                                    <input type="hidden" name="id" value="<%= users[i].id %>">
+                                                    <input type="hidden" name="id" value="">
                                                 </form>
                                             </td>
                                         </tr>
-                                        <% } %>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Dasol</td>
+                                            <td>dasol@gmail.com</td>
+                                            <td>091237683944</td>
+                                            <td>Manager</td>
+                                            <td>$29394</td>
+                                            <td>
+                                                <a href="javascript:void(0);" class="btn btn-danger btn-pill"
+                                                    onclick="event.preventDefault();
+								                        document.getElementById('restore-menu').submit();" style="color: aliceblue;">
+                                                    Restore
+                                                </a>
+                                                <form id="restore-menu" action="/restore/user" method="POST"
+                                                    style="display: none;">
+                                                    <input type="hidden" name="id" value="">
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Dasol</td>
+                                            <td>dasol@gmail.com</td>
+                                            <td>091237683944</td>
+                                            <td>Manager</td>
+                                            <td>$29394</td>
+                                            <td>
+                                                <a href="javascript:void(0);" class="btn btn-danger btn-pill"
+                                                    onclick="event.preventDefault();
+								                        document.getElementById('restore-menu').submit();" style="color: aliceblue;">
+                                                    Restore
+                                                </a>
+                                                <form id="restore-menu" action="/restore/user" method="POST"
+                                                    style="display: none;">
+                                                    <input type="hidden" name="id" value="">
+                                                </form>
+                                            </td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>

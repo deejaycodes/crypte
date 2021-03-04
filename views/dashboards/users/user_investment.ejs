@@ -4,7 +4,7 @@
 
 <!-- Main Content -->
 <div class="main-content">
-    <%- include("../../partials/alerts") %>
+  
     <section class="section">
         <div class="section-body">
             <div class="row">
@@ -26,15 +26,15 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <%  for (let i = 0; i < investments.length; i++ ) { %>
+                                       
                                         <tr>
-                                            <td><%= i + 1 %></td>
-                                            <td><%= investments[i].package.name %></td>
-                                            <td>$<%= investments[i].amount %>.00</td>
-                                            <td><%= investments[i].createdAt %></td>
-                                            <td><%= investments[i].expiredAt %></td>
+                                            <td>1</td>
+                                            <td>Starter Plan</td>
+                                            <td>$222.00</td>
+                                            <td>4/10/22</td>
+                                            <td>34/1/2020</td>
                                         </tr>
-                                        <% } %>
+                                    
                                     </tbody>
                                 </table>
                             </div>
@@ -45,4 +45,4 @@
         </div>
     </section>
 </div>
-<%- include("../../partials/user_footer") %>
+<%- include("../../partials/user_footer") %>]

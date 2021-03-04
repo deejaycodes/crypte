@@ -22,6 +22,7 @@ exports.login = (req, res, next) => {
                 
             })
             .then((user) => {
+                console.log(user)
                 if (user) {
                     let password = req.body.password;
                     if (bcrypt.compareSync(password, user.password)) {
@@ -29,6 +30,9 @@ exports.login = (req, res, next) => {
                         req.session.role = user.role;
                         console.log(user.role)
                         res.redirect("/");
+                        if(user.role=='2'){
+                            res.redirect('/signup')
+                        }
                     } else {
                         req.flash('warning', "Invalid credentials");
                         res.redirect("back");
@@ -131,7 +135,8 @@ exports.register = (req, res, next) => {
                                         .then(referral => {
                                             // increase user referrals
                                             req.flash('success', "Registration successful");
-                                            res.redirect("/");
+                                            res.redirect("/home");
+                                            console.log('E reach house')
                                             req.session.ref = "";
                                         })
                                         .catch(error => {
@@ -156,6 +161,7 @@ exports.register = (req, res, next) => {
                                     console.log(response)
                                     req.flash('success', "Registration successful");
                                     res.redirect("/");
+                                    console.log('E reach house222222')
                                     req.session.ref = "";
                                 })
                                 .catch(error => {

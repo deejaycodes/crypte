@@ -22,8 +22,12 @@ const userSchema = mongoose.Schema({
         required:true
     },
     role:{
-        type:String,
+        type:Number,
         default:0
+    },
+    isAdmin:{
+        type:Boolean,
+        default:false
     },
     wallet:{
         type:Float

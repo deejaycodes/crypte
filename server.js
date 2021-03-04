@@ -5,6 +5,7 @@ const path = require('path')
 const passport = require('passport')
 const indexRoutes = require('./routes/index')
 const authRoutes = require('./routes/auth')
+
 const morgan = require('morgan')
 const webParameters = require("./config/web_params.json");
 
@@ -26,6 +27,7 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 // middlewares
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true

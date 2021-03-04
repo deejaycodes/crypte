@@ -4,7 +4,7 @@
 
 <!-- Main Content -->
 <div class="main-content">
-    <%- include("../partials/alerts") %>
+   
     <section class="section">
         <div class="section-body">
             <div class="row">
@@ -31,17 +31,14 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <%  for (let i = 0; i < withdrawals.length; i++ ) { %>
+                                       
                                         <tr>
-                                            <td><%= i + 1 %></td>
-                                            <td><%= withdrawals[i].user.name %></td>
-                                            <td><%= withdrawals[i].user.email %></td>
-                                            <td>$<%= withdrawals[i].amount %>.00</td>
-                                            <td><%= withdrawals[i].bank %></td>
-                                            <td><%= withdrawals[i].recipient_id %></td>
-                                            <td><%= withdrawals[i].acc_name %></td>
-                                            <td><%= withdrawals[i].acc_number %></td>
-                                            <td><%= withdrawals[i].createdAt %></td>
+                                            <td>1</td>
+                                            <td>Okafor</td>
+                                            <td>okafor@gmail.com</td>
+                                            <td>$2340.00</td>
+                                            <td>GTB</td>
+                                            <td>21/2/2009</td>
                                             <!-- <td>
                                                 <a href="javascript:void(0);" class="btn btn-warning btn-pill"
                                                     onclick="event.preventDefault();
@@ -50,11 +47,51 @@
                                                 </a>
                                                 <form id="approve-withdrawal" action="/unapprove-withdrawal" method="POST"
                                                     style="display: none;">
-                                                    <input type="hidden" name="id" value="<%= withdrawals[i].id %>">
+                                                    <input type="hidden" name="id" value="">
                                                 </form>
                                             </td> -->
                                         </tr>
-                                        <% } %>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Okafor</td>
+                                            <td>okafor@gmail.com</td>
+                                            <td>$2340.00</td>
+                                            <td>GTB</td>
+                                            <td>John Okafor</td>
+                                        
+                                            
+                                            <!-- <td>
+                                                <a href="javascript:void(0);" class="btn btn-warning btn-pill"
+                                                    onclick="event.preventDefault();
+								                        document.getElementById('approve-withdrawal').submit();" style="color: aliceblue;">
+                                                    Disapprove
+                                                </a>
+                                                <form id="approve-withdrawal" action="/unapprove-withdrawal" method="POST"
+                                                    style="display: none;">
+                                                    <input type="hidden" name="id" value="">
+                                                </form>
+                                            </td> -->
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Okafor</td>
+                                            <td>okafor@gmail.com</td>
+                                            <td>$2340.00</td>
+                                            <td>GTB</td>
+                                            <td>21/2/2009</td>
+                                            <!-- <td>
+                                                <a href="javascript:void(0);" class="btn btn-warning btn-pill"
+                                                    onclick="event.preventDefault();
+								                        document.getElementById('approve-withdrawal').submit();" style="color: aliceblue;">
+                                                    Disapprove
+                                                </a>
+                                                <form id="approve-withdrawal" action="/unapprove-withdrawal" method="POST"
+                                                    style="display: none;">
+                                                    <input type="hidden" name="id" value=""">
+                                                </form>
+                                            </td> -->
+                                        </tr>
+                                       
                                     </tbody>
                                 </table>
                             </div>

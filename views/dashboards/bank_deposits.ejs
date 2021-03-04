@@ -4,14 +4,14 @@
 
 <!-- Main Content -->
 <div class="main-content">
-    <%- include("../partials/alerts") %>
+=
     <section class="section">
         <div class="section-body">
             <div class="row">
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Unapproved Bank Deposits</h4>
+                            <h4>Unapproved Deposits</h4>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -28,16 +28,16 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <%  for (let i = 0; i < deposits.length; i++ ) { %>
+                                        
                                         <tr>
-                                            <td><%= i + 1 %></td>
-                                            <td><img alt="image" src="/uploads/<%= deposits[i].image %>" width="35"></td>
-                                            <td><%= deposits[i].user.name %></td>
-                                            <td><%= deposits[i].user.email %></td>
-                                            <td>$<%= deposits[i].amount %>.00</td>
-                                            <td><%= deposits[i].createdAt %></td>
+                                            <td>1</td>
+                                            <td><img alt="image" src="" width="35"></td>
+                                            <td>John</td>
+                                            <td>john@gmail.com</td>
+                                            <td>$350.00</td>
+                                            <td>12/2/2020</td>
                                             <td>
-                                                <a href="/bankdeposit/<%= deposits[i].id %>"
+                                                <a href="#"
                                                     class="btn btn-primary btn-pill">View</a>
                                                 <a href="javascript:void(0);" class="btn btn-warning btn-pill"
                                                     onclick="event.preventDefault();
@@ -46,11 +46,52 @@
                                                 </a>
                                                 <form id="approve-deposit" action="/approve-deposit" method="POST"
                                                     style="display: none;">
-                                                    <input type="hidden" name="id" value="<%= deposits[i].id %>">
+                                                    <input type="hidden" name="id" value="#">
                                                 </form>
                                             </td>
                                         </tr>
-                                        <% } %>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><img alt="image" src="" width="35"></td>
+                                            <td>John</td>
+                                            <td>john@gmail.com</td>
+                                            <td>$350.00</td>
+                                            <td>12/2/2020</td>
+                                            <td>
+                                                <a href="#"
+                                                    class="btn btn-primary btn-pill">View</a>
+                                                <a href="javascript:void(0);" class="btn btn-warning btn-pill"
+                                                    onclick="event.preventDefault();
+								                        document.getElementById('approve-deposit').submit();" style="color: aliceblue;">
+                                                    Approve
+                                                </a>
+                                                <form id="approve-deposit" action="/approve-deposit" method="POST"
+                                                    style="display: none;">
+                                                    <input type="hidden" name="id" value="#">
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><img alt="image" src="" width="35"></td>
+                                            <td>John</td>
+                                            <td>john@gmail.com</td>
+                                            <td>$350.00</td>
+                                            <td>12/2/2020</td>
+                                            <td>
+                                                <a href="#"
+                                                    class="btn btn-primary btn-pill">View</a>
+                                                <a href="javascript:void(0);" class="btn btn-warning btn-pill"
+                                                    onclick="event.preventDefault();
+								                        document.getElementById('approve-deposit').submit();" style="color: aliceblue;">
+                                                    Approve
+                                                </a>
+                                                <form id="approve-deposit" action="/approve-deposit" method="POST"
+                                                    style="display: none;">
+                                                    <input type="hidden" name="id" value="#">
+                                                </form>
+                                            </td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>

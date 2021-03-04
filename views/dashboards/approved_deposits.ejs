@@ -4,7 +4,7 @@
 
 <!-- Main Content -->
 <div class="main-content">
-    <%- include("../partials/alerts") %>
+   
     <section class="section">
         <div class="section-body">
             <div class="row">
@@ -26,16 +26,17 @@
                                             <th>Date</th>
                                             <th>Action</th>
                                         </tr>
+                                        
                                     </thead>
                                     <tbody>
-                                        <%  for (let i = 0; i < deposits.length; i++ ) { %>
+                                        
                                         <tr>
-                                            <td><%= i + 1 %></td>
-                                            <td><img alt="image" src="/uploads/<%= deposits[i].image %>" width="35"></td>
-                                            <td><%= deposits[i].user.name %></td>
-                                            <td><%= deposits[i].user.email %></td>
-                                            <td>$<%= deposits[i].amount %>.00</td>
-                                            <td><%= deposits[i].createdAt %></td>
+                                            <td>1</td>
+                                            <td><img alt="image" src="#" width="35"></td>
+                                            <td>Ayo</td>
+                                            <td>ayo@gmail.com</td>
+                                            <td>$309.00</td>
+                                            <td>23/2/2021</td>
                                             <td>
                                                 <a href="javascript:void(0);" class="btn btn-warning btn-pill"
                                                     onclick="event.preventDefault();
@@ -44,11 +45,49 @@
                                                 </a>
                                                 <form id="disapprove-deposit" action="/disapprove-deposit" method="POST"
                                                     style="display: none;">
-                                                    <input type="hidden" name="id" value="<%= deposits[i].id %>">
+                                                    <input type="hidden" name="id" value="678644783463473">
                                                 </form>
                                             </td>
                                         </tr>
-                                        <% } %>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><img alt="image" src="#" width="35"></td>
+                                            <td>Ayo</td>
+                                            <td>ayo@gmail.com</td>
+                                            <td>$309.00</td>
+                                            <td>23/2/2021</td>
+                                            <td>
+                                                <a href="javascript:void(0);" class="btn btn-warning btn-pill"
+                                                    onclick="event.preventDefault();
+								                        document.getElementById('disapprove-deposit').submit();" style="color: aliceblue;">
+                                                    Dis-Approve
+                                                </a>
+                                                <form id="disapprove-deposit" action="/disapprove-deposit" method="POST"
+                                                    style="display: none;">
+                                                    <input type="hidden" name="id" value="678644783463473">
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><img alt="image" src="#" width="35"></td>
+                                            <td>Ayo</td>
+                                            <td>ayo@gmail.com</td>
+                                            <td>$309.00</td>
+                                            <td>23/2/2021</td>
+                                            <td>
+                                                <a href="javascript:void(0);" class="btn btn-warning btn-pill"
+                                                    onclick="event.preventDefault();
+								                        document.getElementById('disapprove-deposit').submit();" style="color: aliceblue;">
+                                                    Dis-Approve
+                                                </a>
+                                                <form id="disapprove-deposit" action="/disapprove-deposit" method="POST"
+                                                    style="display: none;">
+                                                    <input type="hidden" name="id" value="678644783463473">
+                                                </form>
+                                            </td>
+                                        </tr>
+                                       
                                     </tbody>
                                 </table>
                             </div>

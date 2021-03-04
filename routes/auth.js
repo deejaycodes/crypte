@@ -69,61 +69,61 @@ router.get('/signup', (req,res)=>{
 
 })
 
-router.post("/register", async (req, res) => {
-    try {
-      const data = req.body;
-      console.log(req.body)
-      if (
-        !data.name ||
-        !data.email ||
-        !data.phone ||
-        !data.password
-      ) {
+// router.post("/register", async (req, res) => {
+//     try {
+//       const data = req.body;
+//       console.log(req.body)
+//       if (
+//         !data.name ||
+//         !data.email ||
+//         !data.phone ||
+//         !data.password
+//       ) {
         
-        //handle clientside error here but console log for now
-        console.log("Please fill all fields");
-        return res.send({ msg: "Please fill all fields" });
-      }
+//         //handle clientside error here but console log for now
+//         console.log("Please fill all fields");
+//         return res.send({ msg: "Please fill all fields" });
+//       }
   
-      if (data.password.length < 6) {
-        return res.send({ msg: "Password must be at least 6 characters" });
-      } else {
-        const user = await User.findOne({ email: data.email });
-        if (user) {
-          console.log("User exists, choose another email");
-          res.redirect("/signup");
-        } else {
-          const newUser = await new User({
-            name: data.name,
-            email: data.email,
-            phone: data.phone,
-            password: data.password,
-          });
+//       if (data.password.length < 6) {
+//         return res.send({ msg: "Password must be at least 6 characters" });
+//       } else {
+//         const user = await User.findOne({ email: data.email });
+//         if (user) {
+//           console.log("User exists, choose another email");
+//           res.redirect("/signup");
+//         } else {
+//           const newUser = await new User({
+//             name: data.name,
+//             email: data.email,
+//             phone: data.phone,
+//             password: data.password,
+//           });
   
-        //   const walletDetails = {
-        //     owner: newUser._id,
-        //     amount_deposited: 0,
-        //     revenue: 0,
-        //     widthdrawal: 0,
-        //   };
-          //const userWallet = await walletServices.addUserWallet(walletDetails);
-         // newUser.wallet = userWallet;
-          await newUser.save();
-          console.log("User created");
-          newUser;
-          res.redirect("/");
-          console.log("dashboard redirect successful");
-        }
-      }
-    } catch (error) {
-      console.log(error);
-      res.send(error);
-    }
-  });
+//         //   const walletDetails = {
+//         //     owner: newUser._id,
+//         //     amount_deposited: 0,
+//         //     revenue: 0,
+//         //     widthdrawal: 0,
+//         //   };
+//           //const userWallet = await walletServices.addUserWallet(walletDetails);
+//          // newUser.wallet = userWallet;
+//           await newUser.save();
+//           console.log("User created");
+//           newUser;
+//           res.redirect("/");
+//           console.log("dashboard redirect successful");
+//         }
+//       }
+//     } catch (error) {
+//       console.log(error);
+//       res.send(error);
+//     }
+//   });
 
 
 router.post("/signup", AuthController.register);
-router.post('/login',AuthController.login )
+//router.post('/login',AuthController.login )
 
 
 
